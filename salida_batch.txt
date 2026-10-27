@@ -1,0 +1,105 @@
+root
+ |-- fecha_reporte_web: timestamp (nullable = true)
+ |-- id_de_caso: integer (nullable = true)
+ |-- fecha_de_notificaci_n: timestamp (nullable = true)
+ |-- departamento: integer (nullable = true)
+ |-- departamento_nom: string (nullable = true)
+ |-- ciudad_municipio: integer (nullable = true)
+ |-- ciudad_municipio_nom: string (nullable = true)
+ |-- edad: integer (nullable = true)
+ |-- unidad_medida: integer (nullable = true)
+ |-- sexo: string (nullable = true)
+ |-- fuente_tipo_contagio: string (nullable = true)
+ |-- ubicacion: string (nullable = true)
+ |-- estado: string (nullable = true)
+ |-- pais_viajo_1_cod: integer (nullable = true)
+ |-- pais_viajo_1_nom: string (nullable = true)
+ |-- recuperado: string (nullable = true)
+ |-- fecha_inicio_sintomas: timestamp (nullable = true)
+ |-- fecha_muerte: timestamp (nullable = true)
+ |-- fecha_diagnostico: timestamp (nullable = true)
+ |-- fecha_recuperado: timestamp (nullable = true)
+ |-- tipo_recuperacion: string (nullable = true)
+ |-- per_etn_: integer (nullable = true)
+ |-- nom_grupo_: string (nullable = true)
+
+Filas cargadas: 300000
+Filas después de limpiar: 300000 de 300000
++----------+------+
+|recuperado| count|
++----------+------+
+|       N/a|  1282|
+| Fallecido|  8408|
+|Recuperado|290310|
++----------+------+
+
+Top 10 departamentos:
++----------------+-----+
+|departamento_nom|count|
++----------------+-----+
+|          BOGOTA|81600|
+|       ANTIOQUIA|50753|
+|           VALLE|22871|
+|    BARRANQUILLA|13847|
+|       SANTANDER|13229|
+|    CUNDINAMARCA|12720|
+|       CARTAGENA| 8127|
+|          TOLIMA| 8068|
+|       ATLANTICO| 7642|
+| NORTE SANTANDER| 6794|
++----------------+-----+
+
+Casos por sexo:
++----+------+
+|sexo| count|
++----+------+
+|   F|153861|
+|   M|146139|
++----+------+
+
+Casos por mes:
++--------+-----+
+|anio_mes|count|
++--------+-----+
+| 2020-05| 5618|
+| 2020-06| 8823|
+| 2020-07|26669|
+| 2020-08|43947|
+| 2020-09|28180|
+| 2020-10|31117|
+| 2020-11|31923|
+| 2020-12|41810|
+| 2021-01|25354|
+| 2021-02|   66|
+| 2021-03|   88|
+| 2021-04|33112|
+| 2021-05|  453|
+| 2021-06|22302|
+| 2021-07|  421|
+| 2021-08|   60|
+| 2021-09|   36|
+| 2021-10|    2|
+| 2022-01|   19|
++--------+-----+
+
+Letalidad por grupo de edad:
++----------+------+-------------+
+|grupo_edad| casos|letalidad_pct|
++----------+------+-------------+
+|      0-17| 22408|         0.09|
+|     18-39|141227|         0.25|
+|     40-59| 90764|         1.85|
+|       60+| 45601|        13.93|
++----------+------+-------------+
+
++-------+-----------------+
+|summary|       edad_anios|
++-------+-----------------+
+|  count|           300000|
+|   mean|         39.95374|
+| stddev|17.99527195622345|
+|    min|                0|
+|    max|              108|
++-------+-----------------+
+
+Gráfica guardada en resultados_batch.png
